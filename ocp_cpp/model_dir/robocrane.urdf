@@ -1,0 +1,525 @@
+<?xml version="1.0" ?>
+<robot name="converted_robot">
+   <link name="world">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.0"/>
+         <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <link name="iiwa_base">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.0"/>
+         <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_0">
+         <origin xyz="-0.012605232162215539 4.887429599908401e-06 0.07037290460250488" rpy="3.1414254651921683 -1.4927369668762536 0.0005002689558265255"/>
+         <geometry>
+            <mesh filename="converted_link_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link_0">
+         <origin xyz="-0.012605232162215539 4.887429599908401e-06 0.07037290460250488" rpy="3.1414254651921683 -1.4927369668762536 0.0005002689558265255"/>
+         <geometry>
+            <mesh filename="converted_link_0.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="world2iiwa_base_fixed">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="world2iiwa_base_fixed">
+      <parent link="world"/>
+      <child link="world2iiwa_base_fixed"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="world2iiwa_base_fixed_offset">
+      <parent link="world2iiwa_base_fixed"/>
+      <child link="iiwa_base"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="iiwa_link_1">
+      <inertial>
+         <origin xyz="0.0 -0.01439 0.102503" rpy="0.0 0.0 0.0"/>
+         <mass value="6.495"/>
+         <inertia ixx="0.0690761441316632" iyy="0.0711085586914514" izz="0.0200625854402119" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_1">
+         <origin xyz="-5.27104350625686e-06 -0.03353670972211395 0.12342119298767149" rpy="-9.198525242337357e-05 -0.21414688022549955 1.5710213048599266"/>
+         <geometry>
+            <mesh filename="converted_link_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link_1">
+         <origin xyz="-5.27104350625686e-06 -0.03353670972211395 0.12342119298767149" rpy="-9.198525242337357e-05 -0.21414688022549955 1.5710213048599266"/>
+         <geometry>
+            <mesh filename="converted_link_1.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="iiwa_joint_1">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="iiwa_joint_1">
+      <parent link="iiwa_base"/>
+      <child link="iiwa_joint_1"/>
+      <origin xyz="0.0 0.0 0.1575" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.96706" upper="2.96706" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="iiwa_joint_1_offset">
+      <parent link="iiwa_joint_1"/>
+      <child link="iiwa_link_1"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="iiwa_link_2">
+      <inertial>
+         <origin xyz="1.2e-05 0.06472 0.004804" rpy="0.0 0.0 0.0"/>
+         <mass value="8.807"/>
+         <inertia ixx="0.0824701683534692" iyy="0.0164110968055191" izz="0.0873510892661361" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_2">
+         <origin xyz="0.00019457364355379413 0.07676150111206871 0.03696552398076234" rpy="-3.0937993815979024 -1.3271099980218897 1.5213877010393428"/>
+         <geometry>
+            <mesh filename="converted_link_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link_2">
+         <origin xyz="0.00019457364355379413 0.07676150111206871 0.03696552398076234" rpy="-3.0937993815979024 -1.3271099980218897 1.5213877010393428"/>
+         <geometry>
+            <mesh filename="converted_link_2.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="iiwa_joint_2">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="iiwa_joint_2">
+      <parent link="iiwa_link_1"/>
+      <child link="iiwa_joint_2"/>
+      <origin xyz="0.0 0.0 0.2025" rpy="1.5707963267948963 0.0 3.141592653589793"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.0944" upper="2.0944" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="iiwa_joint_2_offset">
+      <parent link="iiwa_joint_2"/>
+      <child link="iiwa_link_2"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="iiwa_link_3">
+      <inertial>
+         <origin xyz="-0.000208 0.01601 0.087283" rpy="0.0 0.0 0.0"/>
+         <mass value="2.8"/>
+         <inertia ixx="0.0230152941318817" iyy="0.0228661554143474" izz="0.0454482283748983" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_3">
+         <origin xyz="3.422167817053064e-06 0.034593431321985266 0.11460321517528532" rpy="-0.25847229786925596 -0.004008068005500576 -0.015446283450070843"/>
+         <geometry>
+            <mesh filename="converted_link_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link_3">
+         <origin xyz="3.422167817053064e-06 0.034593431321985266 0.11460321517528532" rpy="-0.25847229786925596 -0.004008068005500576 -0.015446283450070843"/>
+         <geometry>
+            <mesh filename="converted_link_3.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="iiwa_joint_3">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="iiwa_joint_3">
+      <parent link="iiwa_link_2"/>
+      <child link="iiwa_joint_3"/>
+      <origin xyz="0.0 0.2375 0.0" rpy="1.5707963267948963 0.0 3.141592653589793"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.96706" upper="2.96706" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="iiwa_joint_3_offset">
+      <parent link="iiwa_joint_3"/>
+      <child link="iiwa_link_3"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="iiwa_link_4">
+      <inertial>
+         <origin xyz="-0.000203 0.098639 0.011478" rpy="0.0 0.0 0.0"/>
+         <mass value="5.283"/>
+         <inertia ixx="0.0472789668341968" iyy="0.00964726804146909" izz="0.0466529007761679" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_4">
+         <origin xyz="1.8371466943306352e-06 0.08761761171218926 0.029221984000194035" rpy="1.3127574114804588 0.0028218127968602236 -0.0007313284894353545"/>
+         <geometry>
+            <mesh filename="converted_link_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link_4">
+         <origin xyz="1.8371466943306352e-06 0.08761761171218926 0.029221984000194035" rpy="1.3127574114804588 0.0028218127968602236 -0.0007313284894353545"/>
+         <geometry>
+            <mesh filename="converted_link_4.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="iiwa_joint_4">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="iiwa_joint_4">
+      <parent link="iiwa_link_3"/>
+      <child link="iiwa_joint_4"/>
+      <origin xyz="0.0 0.0 0.1825" rpy="1.5707963267948963 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.0944" upper="2.0944" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="iiwa_joint_4_offset">
+      <parent link="iiwa_joint_4"/>
+      <child link="iiwa_link_4"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="iiwa_link_5">
+      <inertial>
+         <origin xyz="5.7e-05 0.014468 0.062938" rpy="0.0 0.0 0.0"/>
+         <mass value="1.889"/>
+         <inertia ixx="0.0138359953358589" iyy="0.0116859337751969" izz="0.00571863785412578" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_5">
+         <origin xyz="-0.0001324869571615851 0.03311986980314611 0.07751948889536421" rpy="0.001424813406476269 -0.46017360706180677 -1.5799843072107402"/>
+         <geometry>
+            <mesh filename="converted_link_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link_5">
+         <origin xyz="-0.0001324869571615851 0.03311986980314611 0.07751948889536421" rpy="0.001424813406476269 -0.46017360706180677 -1.5799843072107402"/>
+         <geometry>
+            <mesh filename="converted_link_5.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="iiwa_joint_5">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="iiwa_joint_5">
+      <parent link="iiwa_link_4"/>
+      <child link="iiwa_joint_5"/>
+      <origin xyz="0.0 0.2175 0.0" rpy="1.5707963267948963 0.0 3.141592653589793"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.96706" upper="2.96706" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="iiwa_joint_5_offset">
+      <parent link="iiwa_joint_5"/>
+      <child link="iiwa_link_5"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="iiwa_link_6">
+      <inertial>
+         <origin xyz="0.000363 0.016982 -0.019731" rpy="0.0 0.0 0.0"/>
+         <mass value="2.32"/>
+         <inertia ixx="0.00732758787216765" iyy="0.00477633755783711" izz="0.00606797638550296" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_6">
+         <origin xyz="-1.4832284468175207e-06 0.0012410521503498995 0.0018175210533025454" rpy="1.7323183586233437 -0.002485992547326843 3.141042649500553"/>
+         <geometry>
+            <mesh filename="converted_link_6.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link_6">
+         <origin xyz="-1.4832284468175207e-06 0.0012410521503498995 0.0018175210533025454" rpy="1.7323183586233437 -0.002485992547326843 3.141042649500553"/>
+         <geometry>
+            <mesh filename="converted_link_6.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="iiwa_joint_6">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="iiwa_joint_6">
+      <parent link="iiwa_link_5"/>
+      <child link="iiwa_joint_6"/>
+      <origin xyz="0.0 0.0 0.1825" rpy="1.5707963267948963 0.0 0.0"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-2.0944" upper="2.0944" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="iiwa_joint_6_offset">
+      <parent link="iiwa_joint_6"/>
+      <child link="iiwa_link_6"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="iiwa_link_7">
+      <inertial>
+         <origin xyz="0.001904 -9.3e-05 0.018862" rpy="0.0 0.0 0.0"/>
+         <mass value="0.863"/>
+         <inertia ixx="0.000884" iyy="0.000888" izz="0.001105" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="link_7">
+         <origin xyz="-0.0003526944420571491 0.0014705984572197317 0.028385956351366533" rpy="2.059615554126512 -1.5223534615841767 -0.09155740779596021"/>
+         <geometry>
+            <mesh filename="converted_link_7.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="link_7">
+         <origin xyz="-0.0003526944420571491 0.0014705984572197317 0.028385956351366533" rpy="2.059615554126512 -1.5223534615841767 -0.09155740779596021"/>
+         <geometry>
+            <mesh filename="converted_link_7.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="iiwa_joint_7">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="iiwa_joint_7">
+      <parent link="iiwa_link_6"/>
+      <child link="iiwa_joint_7"/>
+      <origin xyz="0.0 0.081 0.0" rpy="1.5707963267948963 0.0 3.141592653589793"/>
+      <axis xyz="0.0 0.0 1.0"/>
+      <limit lower="-3.05433" upper="3.05433" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="iiwa_joint_7_offset">
+      <parent link="iiwa_joint_7"/>
+      <child link="iiwa_link_7"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="cj_top">
+      <inertial>
+         <origin xyz="0.0135 -0.0 0.02238" rpy="0.0 0.0 0.0"/>
+         <mass value="0.5"/>
+         <inertia ixx="0.000124" iyy="0.000378" izz="0.000425" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="cj_cam_mount_vis">
+         <origin xyz="0.041258404438788726 -0.007104178327697462 0.015216374048524066" rpy="-2.513783919079756 -1.1884949070966617 -0.8328063511935578"/>
+         <geometry>
+            <mesh filename="converted_cj_cam_mount_vis.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="cj_cam_mount">
+         <origin xyz="0.04090966786232343 -0.00672861200351045 0.015607382665049074" rpy="-2.377596235093358 -1.1636747845042246 -0.9852471262923431"/>
+         <geometry>
+            <mesh filename="converted_cj_cam_mount.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="iiwa_link_72cj_top_fixed">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="iiwa_link_72cj_top_fixed">
+      <parent link="iiwa_link_7"/>
+      <child link="iiwa_link_72cj_top_fixed"/>
+      <origin xyz="0.0 0.0 0.071" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="iiwa_link_72cj_top_fixed_offset">
+      <parent link="iiwa_link_72cj_top_fixed"/>
+      <child link="cj_top"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="cj_middle">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.016"/>
+         <inertia ixx="1e-06" iyy="1e-06" izz="1e-06" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="cj_middle_vis">
+         <origin xyz="-8.463392889917393e-12 9.83445372340832e-15 4.262779455535506e-12" rpy="1.5707963267948966 -1.5707963057214722 0.0"/>
+         <geometry>
+            <mesh filename="converted_cj_middle_vis.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="cj_middle">
+         <origin xyz="8.967736131474848e-10 4.289261755296317e-09 -9.139484782691423e-09" rpy="1.5707963267948966 -1.5707963057214722 0.0"/>
+         <geometry>
+            <mesh filename="converted_cj_middle.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint_cj1">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint_cj1">
+      <parent link="cj_top"/>
+      <child link="joint_cj1"/>
+      <origin xyz="0.0 0.0 0.07077" rpy="0.0 0.0 0.0"/>
+      <axis xyz="1.0 0.0 0.0"/>
+      <limit lower="-0.785" upper="0.785" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint_cj1_offset">
+      <parent link="joint_cj1"/>
+      <child link="cj_middle"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="cj_bot">
+      <inertial>
+         <origin xyz="0.0 0.0 0.05" rpy="0.0 0.0 0.0"/>
+         <mass value="1.0"/>
+         <inertia ixx="0.0008" iyy="0.0008" izz="0.001" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="cj_bot_vis">
+         <origin xyz="0.00015271519944676283 -0.004073131328052309 0.0009123981241352209" rpy="3.1221008947552984 1.5074100227533762 1.591807463255164"/>
+         <geometry>
+            <mesh filename="converted_cj_bot_vis.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="cj_bot">
+         <origin xyz="3.511014749576836e-05 -0.0007424685581731827 -0.004167570293986278" rpy="1.9660266630606218 1.5477863006237507 1.6112222182089324"/>
+         <geometry>
+            <mesh filename="converted_cj_bot.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="joint_cj2">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="revolute" name="joint_cj2">
+      <parent link="cj_middle"/>
+      <child link="joint_cj2"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+      <axis xyz="0.0 1.0 0.0"/>
+      <limit lower="-0.785" upper="0.785" effort="100" velocity="100"/>
+   </joint>
+   <joint type="fixed" name="joint_cj2_offset">
+      <parent link="joint_cj2"/>
+      <child link="cj_bot"/>
+      <origin xyz="-0.0 -0.0 0.028" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="base_mount">
+      <inertial>
+         <origin xyz="0.0 -0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="1.0"/>
+         <inertia ixx="0.0005" iyy="0.0005" izz="0.0006" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="base_mount">
+         <origin xyz="-0.0003605835908682333 8.53627523634894e-05 -5.919937081919364e-05" rpy="0.010714522839643192 -1.567950477987022 3.132357133252331"/>
+         <geometry>
+            <mesh filename="converted_base_mount.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="base_mount">
+         <origin xyz="-0.0003605835908682333 8.53627523634894e-05 -5.919937081919364e-05" rpy="0.010714522839643192 -1.567950477987022 3.132357133252331"/>
+         <geometry>
+            <mesh filename="converted_base_mount.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="cj_bot2base_mount_fixed">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="cj_bot2base_mount_fixed">
+      <parent link="cj_bot"/>
+      <child link="cj_bot2base_mount_fixed"/>
+      <origin xyz="0.0 0.0 0.0169" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="cj_bot2base_mount_fixed_offset">
+      <parent link="cj_bot2base_mount_fixed"/>
+      <child link="base_mount"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <link name="base">
+      <inertial>
+         <origin xyz="0.0 -2.70394e-05 0.0354675" rpy="-0.003056977619347881 0.0 0.0"/>
+         <mass value="0.777441"/>
+         <inertia ixx="0.000260285" iyy="0.000225381" izz="0.000152708" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+      <visual name="base">
+         <origin xyz="9.197026165775215e-08 -2.7039392101011293e-05 0.0354674813211748" rpy="-0.0030569905423776605 7.761755127511094e-08 2.5390104554665343e-05"/>
+         <geometry>
+            <mesh filename="converted_base.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+      <visual name="base">
+         <origin xyz="9.197026165775215e-08 -2.7039392101011293e-05 0.0354674813211748" rpy="-0.0030569905423776605 7.761755127511094e-08 2.5390104554665343e-05"/>
+         <geometry>
+            <mesh filename="converted_base.stl"/>
+         </geometry>
+         <material name="white"/>
+      </visual>
+   </link>
+   <link name="base_mount2base_fixed">
+      <inertial>
+         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+         <mass value="0.001"/>
+         <inertia ixx="1e-09" iyy="1e-09" izz="1e-09" ixy="0" ixz="0" iyz="0"/>
+      </inertial>
+   </link>
+   <joint type="fixed" name="base_mount2base_fixed">
+      <parent link="base_mount"/>
+      <child link="base_mount2base_fixed"/>
+      <origin xyz="0.0 0.0 0.0038" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <joint type="fixed" name="base_mount2base_fixed_offset">
+      <parent link="base_mount2base_fixed"/>
+      <child link="base"/>
+      <origin xyz="-0.0 -0.0 -0.0" rpy="0.0 0.0 0.0"/>
+   </joint>
+   <material name="white">
+      <color rgba="1 1 1 1"/>
+   </material>
+</robot>
